@@ -1,2 +1,16 @@
-title: Eternal Surfer
+title: Welcome to Eternal Surfer
 remote_theme: benbalter/retlab
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
+
+include: ["_pages"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+  
+footer:
+  links:
+    - label: Sitemap
+      url: "/sitemap.xml"  
+  
