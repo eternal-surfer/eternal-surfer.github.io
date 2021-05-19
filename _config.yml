@@ -1,5 +1,5 @@
 title: Welcome to Eternal Surfer
-remote_theme: benbalter/retlab
+remote_theme: "mmistakes/minimal-mistakes@4.23.0"
 minimal_mistakes_skin: "neon" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 
 include: ["_pages"]
@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cache
   
 footer:
   links:
