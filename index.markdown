@@ -6,7 +6,8 @@ layout: default
 title: Simplify your life
 list_title: 'Coming Soon'
 ---
- 
+
+# Coming Soon 
 
 
   
