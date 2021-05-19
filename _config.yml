@@ -8,6 +8,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-include-cach
   
 footer:
   links:
