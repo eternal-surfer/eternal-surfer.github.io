@@ -1,0 +1,399 @@
+// Placeholder to allow defining custom styles that override everything else.
+// (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+/**
+ * The hero image 
+ */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  //background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/images/lucas-calloch-P-yzuyWFEIk-unsplash.jpg"); 
+
+  /* Set a specific height 
+   height: 450px;  
+  max-width: 100%;  
+  vertical-align: middle;
+  display: block; */
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image
+
+ */
+.hero-text {  
+  position: absolute;
+ text-align: center;
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%, -50%); 
+  color: $background-color;  
+}
+
+
+
+/**
+ * Buttons
+ */
+.btn {
+  border: none; /* Remove borders */
+  color: $background-color; /* Add a text color */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  font-weight: 400;  
+  text-decoration: none;
+  padding: .35rem .7rem;  
+  border-radius: .25rem;
+  display: inline-block;
+  transition: all 0.2s;
+  box-sizing: border-box;
+  font-size: 1.275rem;
+  margin-top: .75rem;
+}
+
+.success {background-color: #04AA6D;} /* Green */
+.success:hover {background-color: #46a049;}
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+.warning {background-color: #ff9800;} /* Orange */
+.warning:hover {background: #e68a00;}
+
+.danger {background-color: #f44336;} /* Red */
+.danger:hover {background: #da190b;}
+
+.default {background-color: #e7e7e7; color: black;} /* Gray */
+.default:hover {background: #ddd;}
+
+.submit {background-color: #df1c44} /* Red */
+.submit:hover {background: #DF1C44C9}
+
+/* Scroll button style */
+.scroll-to-top{
+	position: fixed;
+	bottom: 30px;
+	right: 40px;
+	color: $background-color;
+	font-size: 1rem;
+	font-weight: bold;
+	padding: .2rem .7rem;
+	border-radius: 50%;
+	background-color: $brand-color; 
+	svg {height: 32px; }
+	
+	:hover {
+	  svg {fill: #4FCE5D;}
+	}
+}
+
+/*Category link div's*/
+.category-links{
+	color: $text-color;
+	font-size: 1.275rem;
+	font-weight: bold;
+	padding: .2rem;
+	border-radius: 10px;
+	min-width: 100px;
+	max-width: 200px;
+	border: 1px solid $border-color-01;
+    background-color: #e0e0e0;	
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+}
+
+.category-links a:visited{
+	color: $text-color;	
+}
+
+.category-small-links{	
+	font-size: 1rem;
+	font-weight: bold;
+	padding: .1rem;
+	border-radius: 5px;
+	min-width: 50px;
+	max-width: 150px;	
+}
+
+/* Custom image styles */
+img[src~="thumbnail"] {
+   width:150px;
+   height:100px;
+}
+
+img[src~="bordered"] {
+   border: 1px solid black;
+}
+img[src~="wrap"] {
+   padding: 5px;
+}
+img[src~="wrapimg"] {
+  max-width: 100%;
+  max-width: 60%;
+  vertical-align: middle;
+  float:left;
+}
+
+img[alt~="author"] {
+  display: block;
+  float:left;
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  margin-right: 5px;
+  margin-top: -2px;
+  border-radius: 50%;
+}
+
+img#header-logo{
+	width:240px;
+	height:45px;
+	margin:5px;
+}
+
+/**
+ * Dropdown Menu
+ */
+  /* Dropdown Button */
+.dropbtn {
+  background-color: #e1e4e8;
+  @include relative-font-size(1.125);
+  line-height: $base-line-height;
+  color: $text-color;
+  padding: 10px; 
+  border: none;
+  font-weight: 300;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: $text-color;
+  padding: 5px 10px;
+  text-decoration: none;
+  display: block;
+  line-height: $base-line-height;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown 
+.dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+
+/* Style the search box */
+.search-input {  
+  padding: 8px;
+  border: 1px solid $border-color-01;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 1rem;
+  color: $text-color; 
+  width: 66%;  
+}
+
+/* Style the feedbackform */
+.fbk-input {  
+  padding: 8px;
+  border:none;
+  border-bottom: 2px solid #b0bec5;
+  border-radius: 0px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 1.125rem;
+  color: $text-color; 
+  width: 90%;  
+}
+
+
+.fbk-hdrsec {
+  background-image: url("/assets/images/universe-1566161_1280.jpg");
+  padding: 1rem;
+  border: 1px solid $border-color-01;
+  border-radius: 5px;
+  margin: 0px 0px 0px 0px;  
+  width: 100%; 
+  color: $brand-color-light;
+}
+
+.fbk-sec {	
+  padding: 1rem;
+  border: 1px solid $border-color-01;
+  border-radius: 5px;
+  margin: 5px 0px 5px 0px;  
+  background-color: $brand-color-light; 
+  width: 100%; 
+}
+
+.search-input {  
+  padding: 8px;
+  border: 3px solid $border-color-01;
+  border-radius: 5px;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 1.125rem;
+  color: $text-color; 
+  width: 66%;  
+}
+
+/* Style the search icon */
+.icon {
+    display: inline-block;
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    position: relative;
+    top: -0.1em;
+    vertical-align: middle;
+}
+
+.search__toggle {
+    margin-left: 0rem;
+    margin-right: 1rem;
+    height: 2.5rem;
+    border: 0;
+    outline: none;
+    color: #b3b3b3;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px !important;
+    width: 1px !important;
+    border: 0 !important;
+    overflow: hidden;
+}
+
+
+/* Breadcrumbs*/
+
+#breadcrumbs {
+	font-size: 1rem;
+	text-decoration: none;
+	font-weight: normal;
+	margin: none;
+	font-weight: lighter;
+}
+
+
+/* Pagination*/
+.previous-page{
+	font-weight: normal;
+	font-size: 1.475rem;
+}
+
+.next-page{
+	font-weight: normal;
+	font-size: 1.475rem;
+}
+
+.current-page{
+	font-weight: normal;
+	font-size: 1.475rem;
+}
+
+.remaining-page
+{
+	font-weight: normal;
+	font-size: 1.475rem;
+}
+
+.archive-pagination{
+    font-weight: normal;
+	font-size: 1.475rem;
+}
+
+.archive-pagination a{
+   text-decoration: none;
+}
+.archive-pagination a:visited{
+   text-decoration: none;
+}
+
+.previous-page-archive{		
+	display: inline-block;
+	max-width: 47%;
+	padding: 10px;	
+	text-align: center;
+}
+
+.next-page-archive{
+    float: right;
+	text-align: center;
+	display: inline-block;
+	padding: 10px;
+	max-width: 47%;
+}
+
+
+/* Footer styles*/
+.footer-links {
+   text-decoration: none;
+   font-size: 1rem;
+   font-weight: lighter;
+   list-style: none; 
+   margin-left: 0;
+}
+
+/* Misc styles */
+.archive-title{
+   font-size: 1.875rem;
+   font-weight: bold;
+}
+
+.page-heading {
+  font-weight: bold;  
+}
+
+.older-post-link { 
+   font-size: 1.075rem;
+   font-weight: lighter;
+   text-decoration: none;
+   text-align: center;
+}
+
+/* Footer style*/
+.footer-description{
+  padding: 5px 5px 2px 0px;
+  font-size: .9rem;
+  font-weight: lighter;
+  text-align: justify;  
+}
+
+.footer-docs{
+  padding: 5px 5px 2px 5px;
+  margin: 0 auto;
+  color: $text-color;
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: center;
+}
