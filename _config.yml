@@ -31,3 +31,10 @@ head_scripts:
   
 paginate: 2
 paginate_path: "/archive/page:num/"  
+
+minima:
+  social_links:
+    twitter:    
+    facebook:     
+    instagram: 
+    linkedin: 
