@@ -1,6 +1,6 @@
 ---
 layout: default
-title: About
+title: about
 permalink: /about/
 ---
 Uncomplicate is home to articles, reviews on how to make your life simple 
