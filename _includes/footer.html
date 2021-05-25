@@ -32,14 +32,14 @@
 		<ul class="footer-links">                
             <li><a href="{{"/about/" | relative_url}}">About Us</a></li>
 			<li><a href="{{"/contact/" | relative_url}}">Contact Us</a></li>	
-            <li><a href="{{"/search/" | relative_url}}">Search this site</a></li>
+            <li><a href="{{"/search/" | relative_url}}">Search</a></li>
         </ul>
       </div>
 	  <div class="footer-col">        
 		<ul class="footer-links"> 
             <li><a href="{{"/disclaimer/" | relative_url}}">Disclaimer</a></li>		
 			<li><a href="{{"/privacy/" | relative_url}}">Privacy Policy</a></li>			
-            <li><a href="{{"/feedback/" | relative_url}}">Feedback/Suggestions</a></li>			
+            <!-- <li><a href="{{"/feedback/" | relative_url}}">feedback/suggestions</a></li>			 -->
         </ul>
       </div>
 	  <!-- <div class="footer-col">
@@ -47,7 +47,8 @@
       </div> -->
     </div>
 	<div class="footer-docs">		
-		<span>Copyright ©{{ "now" | date: "%Y" }} Uncomplicate</span> | <span>Simplify your life...</span>
+		<span>Copyright © {{ "now" | date: "%Y" }} Uncomplicate</span> |
+    <span>Licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
 	</div>
     
 	{%- include back-to-top.html -%}	
