@@ -409,6 +409,16 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: bold;  
 }
 
-table, thead, tfoot{
+table {
   border: 2px solid;
+}
+
+thead {
+  border:0px;
+  border-bottom: 2px solid;
+}
+
+tfoot {
+  border:0px;
+  border-top: 2px solid;
 }
