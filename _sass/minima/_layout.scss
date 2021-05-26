@@ -88,12 +88,12 @@
 
   .page-link {
    @include relative-font-size(1.125);
-	color: $text-color;
+	  color: $text-color;
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
-	font-weight: lighter;
-	font-size: 1.275rem;
+    font-weight: normal;
+    font-size: 1.275rem;
 	
 
     // Gaps between nav items, but not on the last one
@@ -169,7 +169,7 @@
 .social-links {
   @include relative-font-size(0.9375);
   color: $text-color;
-  font-weight: lighter;
+  font-weight: normal;
   a{
   color: $text-color;
   //color: white;
