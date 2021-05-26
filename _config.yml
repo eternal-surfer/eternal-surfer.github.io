@@ -39,4 +39,7 @@ minima:
     instagram: 
     linkedin: 
 
-google_analytics: "G-M9VY7XMPR0"    
+google_analytics: "G-M9VY7XMPR0"
+
+sass:
+    style: compressed
