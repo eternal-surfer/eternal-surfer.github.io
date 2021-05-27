@@ -5,7 +5,7 @@ categories: misc
 author:
 - Bart Simpson
 meta: "Springfield"
-published: true
+published: false
 date: 2021-05-26
 ---
 <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
