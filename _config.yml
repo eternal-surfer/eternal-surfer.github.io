@@ -13,8 +13,8 @@ include: ["_pages"]
 plugins:
   - jekyll-feed
   - jekyll-paginate
-  - jekyll-sitemap  
-  
+  - jekyll-sitemap 
+  - jemoji  
 
 permalink: /:categories/:title/
 
@@ -29,7 +29,7 @@ header_pages:
 head_scripts:
   - /assets/js/back-to-top.js 
   
-paginate: 2
+paginate: 50
 paginate_path: "/archive/page:num/"  
 
 minima:

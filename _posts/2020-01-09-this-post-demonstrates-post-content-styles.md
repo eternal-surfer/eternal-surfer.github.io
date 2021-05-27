@@ -5,12 +5,13 @@ categories: misc
 author:
 - Bart Simpson
 meta: "Springfield"
-published: false
+published: true
 date: 2021-05-26
 ---
 <i class="fas fa-quote-left fa-2x fa-pull-left"></i>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac's, ~~bibendum~~ in velit.
 
+I give this plugin two :hearts: :hearts: :sleepy: :sleepy:.:muscle::muscle:made to do things
 
 ## Some great heading (h2)
 
