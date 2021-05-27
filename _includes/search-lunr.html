@@ -1,4 +1,4 @@
-<script src="/assets/js/lunr.js"></script>
+<script src="/assets/js/lunr-min.js"></script>
 
 <script>
 {% assign counter = 0 %}
@@ -64,7 +64,7 @@ function lunr_search(term) {
 
 
 <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);" >	
-    <div ><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type your search here" ><i class="fas fa-search search-icon" aria-hidden="true" style="" onclick="return lunr_search(document.getElementById('lunrsearch').value);"></i></div>
+    <div ><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type your search here" ><i class="fas fa-search search-icon" aria-hidden="true"  onclick="return lunr_search(document.getElementById('lunrsearch').value);"></i></div>
 </form>
 <div id="lunrsearchresults">
     <ul></ul>
