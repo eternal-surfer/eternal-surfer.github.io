@@ -75,13 +75,15 @@
 .scroll-to-top{
 	position: fixed;
 	bottom: 30px;
-	right: 40px;
-	color: $background-color;
-	font-size: 1rem;
-	font-weight: bold;
+	right: 20px;
+	//color: $background-color;
+  color: #000;
+	font-size: 1.375rem;
+	font-weight: lighter;
 	padding: .42rem .52rem;
 	border-radius: 50%;  
-	background-color: $brand-color-dark; 
+	//background-color: $brand-color-dark;
+  background: rgba(256, 256, 256, 0);
 	svg {height: 32px; }
 	
 	:hover {
@@ -459,4 +461,14 @@ tfoot {
 
 .emoji{
   display: inline-block;
+}
+
+
+.maths {
+  max-width: 100%;
+  height: auto;
+  font-size: 0.875rem;
+  overflow:auto;
+  background:rgb(222, 247, 247);
+  border: 1px solid rgb(199, 230, 230);
 }
