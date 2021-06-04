@@ -1,7 +1,7 @@
 ---
 layout: default
 title: categories
-permalink: /categories/
+permalink: /categories12/
 ---
 <div id="breadcrumbs"><a href="/">Home</a>/Categories</div>
 

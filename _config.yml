@@ -14,7 +14,27 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap 
-  - jemoji  
+  - jemoji
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: 
+      - year
+      - month
+      - categories
+  layout: archive
+  layouts:
+  year: year-archive
+  month: month-archive
+  day: day-archive
+  category: category-archive
+  tag: tag-archive
+  permalinks:
+  year: '/:year/'
+  month: '/:year/:month/'
+  day: '/:year/:month/:day/'
+  tag: '/tag/:name/'
+  category: '/category/:name/'  
 
 permalink: /:categories/:title/
 
@@ -22,9 +42,9 @@ include: ["_pages"]
   
 header_pages:
   - about.markdown
-  - blogs.markdown
-  - archive.markdown
-  - categories.markdown  
+  - blogs.markdown  
+  - year.markdown
+  - category.markdown  
 
 head_scripts:
   - /assets/js/back-to-top.js 
