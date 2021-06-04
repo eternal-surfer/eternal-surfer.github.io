@@ -2,22 +2,32 @@
 layout: default
 ---
 
-
-<h2 style="font-weight:bold;">Categories</h2>
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<h1><strong>Categories</strong></h1>
 
 {% for category in site.categories %}
-
-<div class="category-links"><a href="#{{ category | first}}-ref"> {{ category | first | capitalize }} </a> </div>
-        
+<div style="margin-bottom:30px;display: inline-block;">
+  <div class="category-links"><a href="#{{ category | first}}-ref"> {{ category | first | capitalize }} </a> </div>
+</div>       
 {% endfor %}
 
 <ul style="list-style-type: none;margin-left:0px;">
     {% for category in site.categories %}
 
-      <li><h3 id="{{ category | first}}-ref" style="margin-top: 10px;font-weight:bold;">{{ category | first | capitalize }}</h3><hr style="margin:3px;">
-        <ul style="list-style-type: disc;">
+      <li>
+        <h2 id="{{ category | first}}-ref" style="margin-top:10px;margin-bottom:0px;">{{ category | first | capitalize }}</h2>
+        <hr  style="margin:0px;margin-top:5px;margin-bottom:5px;color:#f5f5f5">
+        <ul class="post-list">
         {% for post in category.last %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          <li>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <span class="post-meta">{% include post-reading-time.html %}</span>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}	
+         </li>
         {% endfor %}
         </ul>
       </li>

@@ -94,17 +94,21 @@
 /*Category link div's*/
 .category-links{
 	color: #fff;
-	font-size: 1.275rem;
-	font-weight: bold;
+	font-size: 1.075rem;
+	font-weight: normal;
 	padding: .2rem;
-	border-radius: 10px;
-	min-width: 100px;
+	border-radius: 5px;
+	min-width: 80px;
 	max-width: 200px;
 	//border: 1px solid $border-color-01;
-  background-color: #f44336;	
+  background-color: #ef5350;	
 	text-decoration: none;
 	text-align: center;
 	display: inline-block;
+}
+
+.category-links a{
+	color: #fff;	
 }
 
 .category-links a:visited{

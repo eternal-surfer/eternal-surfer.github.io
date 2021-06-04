@@ -38,19 +38,21 @@ jekyll-archives:
 
 permalink: /:categories/:title/
 
+show_excerpts: true
+
 include: ["_pages"] 
   
 header_pages:
   - about.markdown
-  - blogs.markdown  
-  - year.markdown
+  - blog.markdown  
+  - month.markdown
   - category.markdown  
 
 head_scripts:
   - /assets/js/back-to-top.js 
   
-paginate: 50
-paginate_path: "/archive/page:num/"  
+paginate: 1
+paginate_path: "/blog/page:num/"  
 
 minima:
   social_links:

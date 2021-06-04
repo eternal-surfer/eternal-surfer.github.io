@@ -1,6 +1,6 @@
 ---
 layout: month-archive
 title: "archives"
-permalink: /month/
+permalink: /archives/
 date: 2021-06-01
 ---

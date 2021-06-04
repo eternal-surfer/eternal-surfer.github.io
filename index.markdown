@@ -8,7 +8,7 @@ list_title: 'Recent Posts'
 ---
 
 <figure>
-<img src="/assets/images/kari-shea-tcgMBsW4zlU-unsplash.jpg" alt="" style="max-height:350px;margin:auto;">
+<img src="/assets/images/kari-shea-tcgMBsW4zlU-unsplash_cr.jpg" alt="" style="max-height:350px;margin:auto;">
 <figcaption>Photo by <a href="https://unsplash.com/@karishea?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kari Shea</a> on <a href="https://unsplash.com/s/photos/simplicity?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </figcaption>
 </figure>
