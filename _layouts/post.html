@@ -1,7 +1,15 @@
 ---
 layout: default
 ---
-{% include breadcrumbs.html %}
+<!-- {% include breadcrumbs.html %} -->
+<div id="breadcrumbs">
+  <a href="/">Home /</a>
+  <a href="/blog/">Blog /</a>
+  <a href="/categories/#{{page.categories | first}}-ref">{{page.categories | first| capitalize }}</a>
+  / {{page.title}}
+
+</div>
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -15,13 +23,15 @@ layout: default
 		    {%- endif -%}
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
+        {% endfor %} • 
       {%- endif -%}
 	  
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- if page.date -%}
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          •  {{ page.date | date: date_format }}
+           {{ page.date | date: date_format }}  
       </time>
+      {%- endif -%}
       {%- if page.modified_date -%}
         ~ 
         {%- assign mdate = page.modified_date | date_to_xmlschema -%}
@@ -38,6 +48,21 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
+
+  <nav class="post-navigation">
+    {% if page.previous.url %}
+      <div class="post-navigation-previous">
+        <a  href="{{ page.previous.url }}"><span class="post-meta post-navigation-title"><strong>Previous Post:</strong></span><br/> {{ page.previous.title }}</a>
+      </div>      
+    {% endif %}
+    {% if page.next.url %}
+      <div class="post-navigation-next">
+        <a  href="{{ page.next.url }}"><span class="post-meta post-navigation-title"><strong>Next Post:</strong></span><br/> {{ page.next.title }}</a>
+      </div>      
+    {% endif %}
+  </nav>
+
+  {%- include related-posts.html -%}
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

@@ -2,14 +2,24 @@
 layout: default
 ---
 
+
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<h1><strong>Categories</strong></h1>
+<h1>Categories</h1>
+
+<!-- <figure>
+  <img src="/assets/images/christina-winter-xIbmtX7cn2c-unsplash.jpg" alt="" style="margin:auto;">
+  <figcaption style="text-align: right;">Photo by <a href="https://unsplash.com/@christina_winter?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Christina Winter</a> on <a href="https://unsplash.com/s/photos/colors-file-binder?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>  
+  </figcaption>
+</figure> -->
 
 {% for category in site.categories %}
-<div style="margin-bottom:30px;display: inline-block;">
+<div style="margin-bottom:5px;display: inline-block;">
   <div class="category-links"><a href="#{{ category | first}}-ref"> {{ category | first | capitalize }} </a> </div>
 </div>       
 {% endfor %}
+
+
+
 
 <ul style="list-style-type: none;margin-left:0px;">
     {% for category in site.categories %}
@@ -24,7 +34,7 @@ layout: default
             <span class="post-meta">{% include post-reading-time.html %}</span>
             <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
             
-            {%- if site.show_excerpts -%}
+            {%- if site.categories_show_excerpts -%}
               {{ post.excerpt }}
             {%- endif -%}	
          </li>

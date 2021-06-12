@@ -15,6 +15,7 @@ dl, dd, ol, ul, figure {
 
 
 
+
 /**
  * Basic styling
  */
@@ -112,7 +113,9 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  //font-weight: $base-font-weight;
+  font-weight: bold;  
+  //color:#ef5350;
 }
 
 
@@ -150,8 +153,10 @@ blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
   padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
+  @include relative-font-size(1.225);
   font-style: italic;
+  font-family: $serif-font-family;
+  font-weight: lighter;   
 
   > :last-child {
     margin-bottom: 0;

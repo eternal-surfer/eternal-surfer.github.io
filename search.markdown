@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Search
+title: search
 permalink: /search/
 ---
 <!-- <h1>{{ page.title | escape }}</h1> -->

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "This post demonstrates post content styles"
-categories: misc
+categories: ishan
 author:
 - Bart Simpson
 meta: "Springfield"
-published: false
+published: true
 date: 2021-05-26
 ---
 
@@ -13,10 +13,11 @@ date: 2021-05-26
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac's, ~~bibendum~~ in velit.
 
 ## Emojis
-I give this plugin two :hearts: :hearts: :sleepy: :sleepy:.:muscle::muscle:made to do things
+💙🇮🇳 🤣🏖️
+{:style="font-size:48px;"}
 
 
-## Table Of Content :hearts: 
+## Table Of Content 
 - toc
 {:toc}
 

@@ -39,6 +39,8 @@ jekyll-archives:
 permalink: /:categories/:title/
 
 show_excerpts: true
+archive_show_excerpts: true
+categories_show_excerpts: true
 
 include: ["_pages"] 
   
@@ -46,7 +48,8 @@ header_pages:
   - about.markdown
   - blog.markdown  
   - month.markdown
-  - category.markdown  
+  - category.markdown 
+  - search.markdown 
 
 head_scripts:
   - /assets/js/back-to-top.js 

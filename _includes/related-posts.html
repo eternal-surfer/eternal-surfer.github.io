@@ -1,0 +1,53 @@
+
+
+<div class="related-posts">
+ 
+<h2 style="margin:5px;">Related Posts</h2><hr style="margin:0px;color:#f5f5f5">
+{% assign RELATED_POSTS_THRESHOLD = 3 %}
+<ul class="related-posts-list">
+  {% assign related_post_count = 0 %}
+  {% for post in site.related_posts %}
+    {% if related_post_count == RELATED_POSTS_THRESHOLD %}
+      {% break %}
+    {% endif %}
+    {% for category in post.categories %}
+      {% if page.categories contains category %}
+        <li>          
+            <a href="{{ site.url }}{{ post.url }}" class="related-posts-link">
+              {{ post.title }}              
+            </a>
+            <small>- {{ post.date | date_to_string }}</small>          
+        </li>
+        {% assign related_post_count = related_post_count | plus: 1 %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+
+  {% assign posts_left = RELATED_POSTS_THRESHOLD | minus: related_post_count %}
+  {% unless posts_left == 0 %}
+    {% for post in site.related_posts %}
+      {% if posts_left == 0 %}
+        {% break %}
+      {% endif %}
+
+      {% assign already_related = false %}
+      {% for category in post.categories %}
+       {% if page.categories contains category %}
+          {% assign already_related = true %}
+          {% break %}>
+        {% endif %}
+      {% endfor %}
+      {% unless already_related %}
+        {% assign posts_left = posts_left | minus: 1 %}
+        <li>          
+            <a href="{{ site.url }}{{ post.url }}" class="related-posts-link">
+              {{ post.title }}              
+            </a>
+            <span class="post-meta"><small>- {{ post.date | date_to_string }}</small></span>          
+        </li>
+      {% endunless %}
+    {% endfor %}
+  {% endunless %}
+</ul>
+</div>
