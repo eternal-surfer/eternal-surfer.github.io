@@ -224,13 +224,13 @@ img#header-logo{
   font-size: 1.275rem;
   font-weight: lighter;
   color: #57656d; 
-  width: 50%;  
+  width: 62%;  
   margin-top: 1px;
  
   //border: 0px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 205px) {
   .search-input{
     width:50%;
   }
@@ -265,7 +265,7 @@ img#header-logo{
   font-weight:lighter;    
   border:0px;   
   //border-left: 1px solid #d8e3e9;  
-  background:#f3f0f0;
+  //background:#f3f0f0;
   margin-top: 4px; 
   margin-left:1px;
   transform: translate(-35px, 0px);
