@@ -37,7 +37,7 @@ function lunr_search(term) {
     document.getElementById('lunrsearchresults').innerHTML = '<ul></ul>';
     
     if(term) {
-        document.getElementById('lunrsearchresults').innerHTML = "<h1 style='margin:0px;'>Search results for '" + term + "'</h1> <hr style='margin:0px;'>" + document.getElementById('lunrsearchresults').innerHTML;
+        document.getElementById('lunrsearchresults').innerHTML = "<h1 id='lunrsearchresultsheader' style='margin:0px;'>Search results for '" + term + "'</h1> <hr style='margin:0px;'>" + document.getElementById('lunrsearchresults').innerHTML;
         //put results on the screen.
         var results = idx.search(term);
         if(results.length>0){
@@ -70,8 +70,9 @@ function lunr_search(term) {
 </style>
 
 
-<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);" style="margin-top: 20px;">	
-    <div><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Search here..." ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';"></i><i class="fas fa-search search-icon" aria-hidden="true"  onclick="return lunr_search(document.getElementById('lunrsearch').value);"></i></div>
+<form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);" class="search-form">	
+    <!-- <div><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Enter your search term" ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';"></i><i class="fas fa-search search-icon" aria-hidden="true"  onclick="return lunr_search(document.getElementById('lunrsearch').value);"></i></div> -->
+    <div><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Enter your search here" ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';document.querySelectorAll('#lunrsearchresults')[0].innerHTML ='';"></i></div>
 </form>
 <div id="lunrsearchresults">
     <ul style="margin:5px;"></ul>
