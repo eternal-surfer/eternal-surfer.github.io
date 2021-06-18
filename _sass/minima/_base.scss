@@ -1,5 +1,6 @@
 html {
   font-size: $base-font-size;
+  scroll-behavior: smooth;
 }
 
 /**
@@ -66,21 +67,18 @@ main {
  * Images
  */
 img {
-  max-width: 100%;  
-  vertical-align: middle;
+  max-width: 100%;    
   display: block;
   margin-bottom: .5rem;
   margin-top: .5rem;
-  //margin-left: auto;
-  //margin-right: auto;
 }
 
 /**
  * Figures
- */
+
 figure{
   
- }
+ } */
  
 figure > img {
   display: block;
@@ -113,9 +111,7 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  //font-weight: $base-font-weight;
-  font-weight: bold;  
-  //color:#ef5350;
+  font-weight: $base-font-weight-bold;
 }
 
 

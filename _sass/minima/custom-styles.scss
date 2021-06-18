@@ -94,25 +94,34 @@
 /*Category link div's*/
 .category-links{
 	color: #fff;
-	font-size: 1.075rem;
+	font-size: 1.0rem;
 	font-weight: normal;
-	padding: .2rem;
-	border-radius: 5px;
+	padding: .2rem;  
+	border-radius: 15px;
 	min-width: 80px;
-	max-width: 200px;
-	//border: 1px solid $border-color-01;
-  background-color: #ef5350;	
+	max-width: 250px;
+	border: 2px solid #ef5350;
+  //background-color: #ef5350;	
 	text-decoration: none;
 	text-align: center;
 	display: inline-block;
+  //box-shadow: 1px 3px 5px #ccc8c8;
 }
 
 .category-links a{
-	color: #fff;	
+	color: #ef5350;	
+  text-decoration: none;
+  font-weight:bold;
 }
 
 .category-links a:visited{
-	color: #fff;	
+	color: #ef5350;
+  text-decoration: none;	
+}
+
+.category-links a:hover{
+  color: #d60906;
+  font-weight:bold;      
 }
 
 .category-small-links{	
@@ -213,7 +222,7 @@ img#header-logo{
 /* Style the search box */
 .search-input {  
   padding: 8px;
-  //padding-right:40px;  
+  //padding-left:0px;  
   border-top: 1px solid #d8e3e9;
   border-right: 1px solid #d8e3e9;
   border-bottom: 1px solid #d8e3e9;
@@ -229,10 +238,11 @@ img#header-logo{
   width: 80%;  
   margin-top: 20px;
  
-  //border: 0px;
 }
 
-
+.search-input::placeholder {
+  color: #93909c;
+}
 
 
 
@@ -259,7 +269,7 @@ img#header-logo{
 }
 
 .search-clear{
-  color:#bdbdbd;
+  color:#000;
   cursor:pointer;
   font-size: 1.52rem;
   padding: 7px 2px 6px 9px;  
@@ -287,12 +297,15 @@ img#header-logo{
   }
 }
 
+
 #lunrsearchresults{  
-  margin-top: 20px;  
+  margin-top: 20px;
+  padding-left: 0px;  
 }
 
 .lunrsearchresult{
-  list-style-type: square;
+  list-style-type: none;
+  padding-left: 0px;
   margin: 0px;
 }
 .lunrsearchresult-title{
@@ -420,22 +433,13 @@ img#header-logo{
 }
 
 .next-page-archive{
-    float: right;
+  float: right  ;
 	text-align: center;
 	display: inline-block;
 	padding: 10px;
 	max-width: 47%;
 }
 
-
-/* Footer styles*/
-.footer-links {
-   text-decoration: none;
-   font-size: 1rem;
-   font-weight: bold;
-   list-style: none; 
-   margin-left: 0;
-}
 
 /* Misc styles */
 .archive-title{
@@ -454,7 +458,20 @@ img#header-logo{
    text-align: center;
 }
 
-/* Footer style*/
+/* Footer styles*/
+.footer-links-list {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  list-style: none; 
+  padding: 5px;  
+  margin-left: 0;  
+}
+
+.footer-links{
+  margin: 5px;
+}
+
 .footer-description{
   padding: 5px 5px 2px 0px;
   font-size: .9rem;
@@ -549,8 +566,8 @@ tfoot {
 }
 
 .post-navigation-title{
-  color: #23245c;
-  font-size: 1.025rem;
+  //color: #23245c;
+  font-size: 1.125rem;
 }
 
 .post-navigation::after{
@@ -563,7 +580,7 @@ tfoot {
     float: left;    
     text-overflow:ellipsis;
     overflow: hidden;
-    padding-left: 5px;
+    padding-left: 3px;
     max-width:45%;
 }
 
@@ -571,7 +588,7 @@ tfoot {
   float: right; 
   text-overflow:ellipsis;
   overflow: hidden;
-  padding-right: 5px;
+  padding-right: 3px;
   max-width:45%;
 }
 
@@ -583,7 +600,7 @@ tfoot {
 .related-posts-list{
   text-decoration: none;
   list-style-type: square;
-  margin: 1em;   
+  margin: 1em;    
 }
 
 .related-posts-title{
@@ -594,7 +611,21 @@ tfoot {
   content: "\200B";
 }
 
+.related-posts-list li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
 .related-posts-link, .related-posts-link:visited, .related-posts-link:hover, .related-posts-link:active {
   text-decoration: none; 
-  font-size: 0.925rem;
+  font-size: 0.975rem;
+}
+
+/* toc Stlyles */
+
+#markdown-toc li {  
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
 }

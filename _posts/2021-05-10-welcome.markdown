@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Welcome!"
-categories: custom
+categories: How-To
 author: John Smith
 date: 2020-09-12
 published: false
@@ -35,5 +35,5 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
-### FAQ's
+## FAQ's
 {% include accordion.html %}

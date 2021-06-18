@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some articles are just so short that we have to make the footer stick"
-categories: short
+categories: Articles
 date: 2016-04-20
 published: false
 ---

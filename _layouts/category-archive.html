@@ -14,7 +14,7 @@ layout: default
 
 {% for category in site.categories %}
 <div style="margin-bottom:5px;display: inline-block;">
-  <div class="category-links"><a href="#{{ category | first}}-ref"> {{ category | first | capitalize }} </a> </div>
+  <div class="category-links"><a href="#{{ category | first}}-ref"> {{ category | first | replace: '-', ' '  }} </a> </div>
 </div>       
 {% endfor %}
 
@@ -25,7 +25,7 @@ layout: default
     {% for category in site.categories %}
 
       <li>
-        <h2 id="{{ category | first}}-ref" style="margin-top:10px;margin-bottom:0px;">{{ category | first | capitalize }}</h2>
+        <h2 id="{{ category | first}}-ref" style="margin-top:10px;margin-bottom:0px;">{{ category | first| replace: '-', ' '  }}</h2>
         <hr  style="margin:0px;margin-top:5px;margin-bottom:5px;color:#f5f5f5">
         <ul class="post-list">
         {% for post in category.last %}

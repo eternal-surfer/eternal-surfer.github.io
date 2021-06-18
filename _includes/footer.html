@@ -29,22 +29,22 @@
       </div>
 	  
       <div class="footer-col">        
-		<ul class="footer-links">                
-            <li><a href="{{"/about/" | relative_url}}">About Us</a></li>
-			<li><a href="{{"/contact/" | relative_url}}">Contact Us</a></li>	
-            <li><a href="{{"/search/" | relative_url}}">Search</a></li>
-        </ul>
+		<ul class="footer-links-list">                
+      <li class="footer-links"><a href="{{"/about/" | relative_url}}">About Us</a></li>
+			<li class="footer-links"><a href="{{"/contact/" | relative_url}}">Contact Us</a></li>	
+      <li class="footer-links"><a href="{{"/search/" | relative_url}}">Search</a></li>
+    </ul>
       </div>
 	  <div class="footer-col">        
-		<ul class="footer-links"> 
-            <li><a href="{{"/disclaimer/" | relative_url}}">Disclaimer</a></li>		
-			<li><a href="{{"/privacy/" | relative_url}}">Privacy Policy</a></li>			
+		<ul class="footer-links-list"> 
+      <li class="footer-links"><a href="{{"/disclaimer/" | relative_url}}">Disclaimer</a></li>		
+			<li class="footer-links"><a href="{{"/privacy/" | relative_url}}">Privacy Policy</a></li>			
             <!-- <li><a href="{{"/feedback/" | relative_url}}">feedback/suggestions</a></li>			 -->
         </ul>
       </div>
 	  <!-- <div class="footer-col">
         <p class="footer-description">{{ site.description | escape }}</p>		
-      </div> -->
+    </div> -->
     </div>
 	<div class="footer-docs">		
 		<span>Copyright © {{ "now" | date: "%Y" }} Uncomplicate</span> |
@@ -54,5 +54,6 @@
     
 	{%- include back-to-top.html -%}	
   </div>
-	<script type="text/javascript" src="{{ "/assets/js/back-to-top.js" | relative url }}"></script>
+	<!-- <script type="text/javascript" src="{{ "/assets/js/back-to-top.js" | relative url }}"></script> -->
+  
 </footer>

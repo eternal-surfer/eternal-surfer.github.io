@@ -1,6 +1,6 @@
 ---
 layout: post
-categories: sunil
+categories: Personal
 published: false
 date: 2016-04-13
 ---

@@ -1,4 +1,5 @@
 # Site settings
+url: "http://127.0.0.1:4000"
 title: Uncomplicate
 email: 
 description: >- # this means to ignore newlines
@@ -68,3 +69,4 @@ google_analytics: "G-M9VY7XMPR0"
 
 sass:
     style: compressed
+
