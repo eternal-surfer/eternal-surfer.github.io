@@ -17,6 +17,7 @@ plugins:
   - jekyll-sitemap 
   - jemoji
   - jekyll-archives
+  - jekyll-gzip
 
 jekyll-archives:
   enabled: 
