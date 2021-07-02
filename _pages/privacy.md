@@ -4,7 +4,7 @@ title: Privacy Policy
 permalink: /privacy/
 ---
 
-# **Terms and Privacy Policy**{:style="display:flex; justify-content:center;"}
+# **Privacy Policy**{:style="display:flex; justify-content:center;"}
 {:style="margin-bottom: 2px;"}
 
 **Updated**: July 2<sup>nd</sup>, 2021 
