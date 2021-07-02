@@ -276,7 +276,7 @@ img#header-logo{
   padding: 12px 5px 0px 5px;     
   border:0px;   
   //border-left: 1px solid #d8e3e9;  
-  background:#f3f0f0;
+  //background:#f3f0f0;
   margin-top: 20px; 
   margin-left:1px;
   transform: translate(-35px, 0px);
@@ -659,4 +659,9 @@ tfoot {
   margin-top: 8px;
   margin-bottom: 8px;
   font-weight: bold;
+}
+
+/* fontawesome background */
+i::before{
+  background:transparent;
 }
