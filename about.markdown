@@ -3,7 +3,7 @@ layout: default
 title: about
 permalink: /about/
 ---
-# **About Us**
+# **About Us**{:style="display:flex; justify-content:center;"} 
 
 Life has become more complicated and fast-paced for most people today. Even though modernity has brought lots of benefits for the common man, overall the quality of life has taken a dip. It is very easy to remain caught up in daily hustle and bustle so much, that important things in life pass by unnoticed. Web of modern gadgets, changing attitudes to work, increasing social engagement have all made time a scarce commodity.
 

@@ -3,8 +3,8 @@ layout: default
 ---
 <!-- {% include breadcrumbs.html %} -->
 <div id="breadcrumbs">
-  <a href="/">Home /</a>
-  <a href="/blog/">Blog /</a>
+  <a href="/">Home</a> /
+  <a href="/blog/">Blog</a> /
   <a href="/categories/#{{page.categories | first}}-ref">{{page.categories | first| capitalize }}</a>
   / {{page.title}}
 
@@ -12,8 +12,8 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  <header class="post-header" >
+    <h1 class="post-title p-name" itemprop="name headline" >{{ page.title | escape }}</h1>
     <p class="post-meta">
 	 {%- if page.author -%}
          {% for author in page.author %}
@@ -52,17 +52,19 @@ layout: default
   <nav class="post-navigation">
     {% if page.previous.url %}
       <div class="post-navigation-previous">
-        <a  href="{{ page.previous.url }}"><span class="post-meta post-navigation-title"><strong>Previous Post:</strong></span><br/> {{ page.previous.title }}</a>
+        <span class="post-meta post-navigation-title">Previous Post:</span><br/>
+        <a  href="{{ page.previous.url }}"> {{ page.previous.title }}</a>
       </div>      
     {% endif %}
     {% if page.next.url %}
       <div class="post-navigation-next">
-        <a  href="{{ page.next.url }}"><span class="post-meta post-navigation-title"><strong>Next Post:</strong></span><br/> {{ page.next.title }}</a>
+        <span class="post-meta post-navigation-title">Next Post:</span><br/>
+        <a  href="{{ page.next.url }}"> {{ page.next.title }}</a>
       </div>      
     {% endif %}
   </nav>
 
-  {%- include related-posts.html -%}
+<!--   {%- include related-posts.html -%} -->
 
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

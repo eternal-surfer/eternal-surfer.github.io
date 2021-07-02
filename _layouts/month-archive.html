@@ -2,9 +2,9 @@
 layout: default
 ---
 {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-<h1><strong>Archive Posts</strong></h1>
+<h1 style="text-align: center;">Archives</h1>
 
-<div style="margin-bottom:15px;display: inline-block;">
+<!-- <div style="margin:auto;margin-bottom:15px;display: flex;justify-content: center;">
     {% for post in site.posts %}
       {% assign currentdate = post.date | date: "%Y" %}
       {% if currentdate != date %}
@@ -12,7 +12,7 @@ layout: default
         {% assign date = currentdate %} 
       {% endif %}    
     {% endfor %}
-</div>
+</div> -->
 
 {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
@@ -21,18 +21,18 @@ layout: default
     {% capture next_month %}{{ post.previous.date | date: "%B" }}{% endcapture %}
 
     {% if forloop.first %}
-    <h2 id="{{ this_year }}-ref" style="margin-bottom:0px;">{{this_year}}</h2>
+    <h2 id="{{ this_year }}-ref" style="margin-bottom:0px;text-align: center;">{{this_year}}</h2>
     <hr  style="margin:0px;margin-top:5px;margin-bottom:5px;color:#f5f5f5">
     <!-- <h3 id="{{ this_year }}-{{ this_month }}-ref">{{ this_month | capitalize }}</h3> -->
     <ul class="post-list">
     {% endif %}
 
     <li>
-      <span class="post-meta"><strong>{{ post.date | date: date_format }}</strong></span>
-      <span class="post-meta">{% include post-reading-time.html %}</span>
-      <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+      <span class="post-meta" >{{ post.date | date: date_format }}</span>
+      <!-- <span class="post-meta">{% include post-reading-time.html %}</span> -->
+      <a class="post-link" href="{{ post.url }}" >{{ post.title  | truncatewords: 15}}</a>
       {%- if site.archive_show_excerpts  -%}
-         {{ post.excerpt }}
+         {{ post.excerpt | truncatewords: 25 }}
        {%- endif -%}
     </li>
       	
@@ -42,7 +42,7 @@ layout: default
     {% else %}
         {% if this_year != next_year %}
         </ul>
-        <h2 id="{{ next_year }}-ref" style="margin-bottom:0px;">{{next_year}}</h2>
+        <h2 id="{{ next_year }}-ref" style="margin-bottom:0px;text-align: center;">{{next_year}}</h2>
         <hr  style="margin:0px;margin-top:5px;margin-bottom:5px;color:#f5f5f5">
         <!-- <h3 id="{{ next_year }}-{{ next_month }}-ref">{{ next_month }}</h3> -->
         <ul class="post-list">

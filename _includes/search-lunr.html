@@ -37,8 +37,8 @@ function lunr_search(term) {
     document.getElementById('lunrsearchresults').innerHTML = '<ul style="margin:0px;"></ul>';
     
     if(term) {
-        document.getElementById('lunrsearchresults').innerHTML = "<h1 id='lunrsearchresultsheader' style='margin:0px;'>Search results for '" + term + "'</h1> <hr style='margin:0px;margin-top:0px;margin-bottom:5px;color:#f5f5f5'>" + document.getElementById('lunrsearchresults').innerHTML;
-        /*put results on the screen.*/
+        /*document.getElementById('lunrsearchresults').innerHTML = "<h2 id='lunrsearchresultsheader' style='margin:0px;'>Search results for '" + term + "'</h2> <hr style='margin:0px;margin-top:0px;margin-bottom:5px;color:#f5f5f5'>" + document.getElementById('lunrsearchresults').innerHTML;
+        put results on the screen.*/
         var results = idx.search(term);
         if(results.length>0){
             /*console.log(idx.search(term))
@@ -50,7 +50,7 @@ function lunr_search(term) {
                 var title = documents[ref]['title'];
                 var date = documents[ref]['date'];
                 var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><span class='post-meta'>"+ date +"</span><br /><a href='" + url + "'><span class='post-link'>" + title + "</span></a><span class='body'>"+ body +"</span><br /></li>";
+                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "' style='text-decoration: dotted;'><span class='post-link'>" + title + "</span></a><span class='body'>"+ body +"</span><br /></li>";
             }
         } else {
             document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>No results found...</li>";
@@ -73,7 +73,7 @@ function lunr_search(term) {
 
 <form autocomplete="off" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);" class="search-form">	
     <!-- <div><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Enter your search term" ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';"></i><i class="fas fa-search search-icon" aria-hidden="true"  onclick="return lunr_search(document.getElementById('lunrsearch').value);"></i></div> -->
-    <div ><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Enter your search here" ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';document.querySelectorAll('#lunrsearchresults')[0].innerHTML ='';"></i></div>
+    <div style="display: flex;justify-content: center;"><input type="text" class="search-input" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Enter your search here" ><i class="fas fa-times search-clear" aria-hidden="true" onclick="document.getElementById('lunrsearch').value = '';document.querySelectorAll('#lunrsearchresults')[0].innerHTML ='';"></i></div>
 </form>
 <div id="lunrsearchresults">
     <ul style="margin:0px;"></ul>

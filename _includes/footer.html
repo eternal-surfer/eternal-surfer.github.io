@@ -1,21 +1,15 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
-  <div class="wrapper">
+  <div class="wrapper-footer">
 
     <div class="footer-col-wrapper">
-      <div class="footer-col">
-	     <div class="feed-subscribe">
-          <a href="{{ 'feed.xml' | relative_url }}">
-            <svg class="svg-icon orange">
-              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </div>
-		<div class="social-links">		
+     <!-- <div class="footer-col" style="max-width:150px;">
+	     
+		  <div class="social-links">		
 		  {%- include social.html -%}
-		</div>
-     <!--  {%- if site.author %}
+		</div>  -->
+     <!-- {%- if site.author %}
         <ul class="contact-list">
           {% if site.author.name -%}
             <li class="p-name">{{ site.author.name | escape }}</li>
@@ -24,31 +18,43 @@
             <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
           {%- endif %}
         </ul>
-      {%- endif %} -->	
-			  
-      </div>
+      {%- endif %} 
+    </div>-->
 	  
       <div class="footer-col">        
-		<ul class="footer-links-list">                
-      <li class="footer-links"><a href="{{"/about/" | relative_url}}">About Us</a></li>
-			<li class="footer-links"><a href="{{"/contact/" | relative_url}}">Contact Us</a></li>	
-      <li class="footer-links"><a href="{{"/search/" | relative_url}}">Search</a></li>
+		<ul class="footer-links-list"> 
+      <li class="footer-links">
+        <!-- <div class="feed-subscribe"> -->
+          <a href="{{ 'feed.xml' | relative_url }}">
+            <svg class="svg-icon orange">
+              <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg>
+            <span>Subscribe</span>
+          </a> &nbsp;&nbsp;  
+        <!-- </div> -->
+        <a href="{{"/search/" | relative_url}}">Search</a> &nbsp;&nbsp; 
+        <a href="{{"/about/" | relative_url}}">About Us</a> &nbsp;&nbsp;
+        <a href="{{"/contact/" | relative_url}}">Contact Us</a> &nbsp;&nbsp;
+           
+      </li>
     </ul>
       </div>
-	  <div class="footer-col">        
+	  <!-- <div class="footer-col">        
 		<ul class="footer-links-list"> 
-      <li class="footer-links"><a href="{{"/disclaimer/" | relative_url}}">Disclaimer</a></li>		
-			<li class="footer-links"><a href="{{"/privacy/" | relative_url}}">Privacy Policy</a></li>			
-            <!-- <li><a href="{{"/feedback/" | relative_url}}">feedback/suggestions</a></li>			 -->
+      <li class="footer-links"></li>		
+			<li class="footer-links"></li>			
+             <li><a href="{{"/feedback/" | relative_url}}">feedback/suggestions</a></li>			 
         </ul>
-      </div>
-	  <!-- <div class="footer-col">
+      </div> 
+	   <div class="footer-col">
         <p class="footer-description">{{ site.description | escape }}</p>		
     </div> -->
     </div>
 	<div class="footer-docs">		
-		<span>Copyright © {{ "now" | date: "%Y" }} Uncomplicate</span> |
-    <span>Licensed under <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a></span>
+		<span>Copyright © {{ "now" | date: "%Y" }} {{site.title | escape| capitalize}}</span> | 
+    <span><strong><a rel="license" href="{{"/copyright/" | relative_url}}">Copyright Policy</a></strong></span> |
+    <span><strong><a href="{{"/privacy/" | relative_url}}">Privacy Policy</a></strong></span>
+    <!-- <span><strong><a href="{{"/disclaimer/" | relative_url}}">Disclaimer</a></strong></span>  -->
     <p>Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/jekyll/minima">Minima theme</a></p>
 	</div>
     
