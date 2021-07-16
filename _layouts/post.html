@@ -2,19 +2,19 @@
 layout: default
 ---
 <!-- {% include breadcrumbs.html %} -->
-<div id="breadcrumbs">
+<!-- <div id="breadcrumbs">
   <a href="/">Home</a> /
   <a href="/blog/">Blog</a> /
   <a href="/categories/#{{page.categories | first}}-ref">{{page.categories | first| capitalize }}</a>
   / {{page.title}}
 
-</div>
+</div> -->
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header" >
+  <header class="post-header" style="margin:0px; margin-top: 20px;margin-bottom: 20px;" >
     <h1 class="post-title p-name" itemprop="name headline" >{{ page.title | escape }}</h1>
-    <p class="post-meta">
+    <p class="post-meta" style="text-align: center;">
 	 {%- if page.author -%}
          {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -23,7 +23,7 @@ layout: default
 		    {%- endif -%}
             <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
             {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %} • 
+        {% endfor %} &nbsp;• &nbsp;
       {%- endif -%}
 	  
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -48,7 +48,7 @@ layout: default
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+  {% include share-buttons.html %}
   <nav class="post-navigation">
     {% if page.previous.url %}
       <div class="post-navigation-previous">
@@ -63,7 +63,7 @@ layout: default
       </div>      
     {% endif %}
   </nav>
-
+  
 <!--   {%- include related-posts.html -%} -->
 
   {%- if site.disqus.shortname -%}
