@@ -28,9 +28,10 @@ layout: default
     {% endif %}
 
     <li>
-      <span class="post-meta" >{{ post.date | date: date_format }}</span>
+      
       <!-- <span class="post-meta">{% include post-reading-time.html %}</span> -->
-      <a class="post-link" href="{{ post.url }}" >{{ post.title  | truncatewords: 15}}</a>
+       <a class="post-link" href="{{ post.url }}" style="display:inline;" >{{ post.title  | truncatewords: 15}}</a>
+       <span class="post-meta">{{ post.date | date: date_format }}</span>
       {%- if site.archive_show_excerpts  -%}
          {{ post.excerpt | truncatewords: 25 }}
        {%- endif -%}

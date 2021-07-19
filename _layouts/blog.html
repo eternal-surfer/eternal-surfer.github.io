@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="home">
-<div id="breadcrumbs"><a href="/">Home</a>/Blog</div>
+<!-- <div id="breadcrumbs"><a href="/">Home</a>/Blog</div> -->
   <!-- {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%} -->
@@ -19,15 +19,18 @@ layout: default
   	
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts limit:50 -%}
+      {%- for post in posts limit: site.recent_post_count -%}
 	  
       <li>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        
         <h2>
+          <!-- <span class="post-meta" style="margin:auto;">{{ post.date | date: date_format }}</span> -->
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
+          
         </h2>
+        
 		
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
@@ -39,13 +42,10 @@ layout: default
 	
   {%- endif -%}
   
-  {%- if posts.size > 50 -%}
-	<div class="older-post-link"> 
-	      Thanks reader for your avid interest.
-	      To view even older posts, visit  
-          <a  href="{{ "/archive/" | relative_url }}">
-	       archives  
-          </a>    
+  {%- if posts.size > site.recent_post_count  -%}
+	<div class="older-post-link" style="font-weight: bold; font-size:1.2rem"> 
+	      <!-- Dear reader, thanks for your avid interest<br/> -->
+	      To see more posts, visit  <a  href="{{ "/archive/" | relative_url }}">archives</a>     
 	</div>
 	
   {%- endif -%}

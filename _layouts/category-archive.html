@@ -30,12 +30,12 @@ layout: default
         <ul class="post-list">
         {% for post in category.last %}
           <li>
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <span class="post-meta">{% include post-reading-time.html %}</span>
-            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
             
+            <!-- <span class="post-meta">{% include post-reading-time.html %}</span> -->
+            <a class="post-link" href="{{ post.url }}" style="display:inline;">{{ post.title }}</a>
+            <span class="post-meta"  >{{ post.date | date: date_format }}</span>
             {%- if site.categories_show_excerpts -%}
-              {{ post.excerpt }}
+              {{ post.excerpt | truncatewords: 25 }}
             {%- endif -%}	
          </li>
         {% endfor %}
