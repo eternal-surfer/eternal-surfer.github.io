@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Living for the Present. What's the Urgency? "
+title: "Living for the Present. What's the Urgency?"
 categories: "Life"
 date: 2021-07-16
 published: true
