@@ -166,10 +166,9 @@ blockquote {
   color: $brand-color;
   border-left: 4px solid $border-color-01;
   padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.225);
+  @include relative-font-size(1.2);
   font-style: italic;
-  font-family: $serif-font-family;
-  font-weight: lighter;   
+  font-family: $serif-font-family;     
 
   > :last-child {
     margin-bottom: 0;
@@ -178,6 +177,10 @@ blockquote {
   i, em {
     font-style: normal;
   }
+}
+
+blockquote p{
+  font-weight: lighter;
 }
 
 
